@@ -74,9 +74,10 @@ const sessionOptions = {
 };
 
 // Root Route
-// app.get("/", (req, res) => {
-//     res.send("Hi, I am root");
-// });
+app.get("/", (req, res) => {
+    // res.send("Hi, I am root");
+    res.redirect("/listings");
+});
 
 // flash and cookie middlewares
 app.use(session(sessionOptions));

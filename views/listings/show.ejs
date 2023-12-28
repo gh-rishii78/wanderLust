@@ -89,9 +89,11 @@
                                 <h6 class="card-subtitle text-body-tertiary small"><%= reviews.createdAt.toString().split(" ").slice(1,4).join(" ") %></h6>
                                 <p class="starability-result card-text mt-2" data-rating="<%= reviews.rating %>"></p>
                                 <p class="card-text"><%= reviews.comment %></p>
-                                <form class="mb-3" method="POST" action="/listings/<%= listing._id %>/reviews/<%= reviews._id %>?_method=DELETE">
-                                    <button class="btn btn-dark btn-sm add-btn del-btn mb-3 mt-3">Delete</button>
-                                </form>
+                                <%if(!(currUser && listing.owner._id.equals(currUser._id))) {%>
+                                    <form class="mb-3" method="POST" action="/listings/<%= listing._id %>/reviews/<%= reviews._id %>?_method=DELETE">
+                                        <button class="btn btn-dark btn-sm add-btn del-btn mb-3 mt-3">Delete</button>
+                                    </form>
+                                <% } %>
                             </div>
                         </div>
                     <% } %>
