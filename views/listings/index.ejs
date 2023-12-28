@@ -1,0 +1,94 @@
+<% layout("/layouts/boilerPlate") %>
+    <!-- <br /> -->
+    <!-- <h3>All Listings : </h3> -->
+    <div id="filters">
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-sharp fa-solid fa-fire"></i></div>
+            <p class="filter-text">Trending</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-bed"></i></div>
+            <p class="filter-text">Rooms</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-city"></i></div>
+            <p class="filter-text">Iconic Cities</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-mountain-city"></i></div>
+            <p class="filter-text">Mountains</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-brands fa-fort-awesome"></i></div>
+            <p class="filter-text">Castles</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-person-swimming"></i></div>
+            <p class="filter-text">Amazing Pools</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-bowling-ball"></i></div>
+            <p class="filter-text">Games</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <p class="filter-text">Bed & Breakfasts</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <p class="filter-text">Nearby Airports</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-campground"></i></div>
+            <p class="filter-text">Camping</p>
+        </div>
+        <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+            <p class="filter-text">Chef's Kitchen</p>
+        </div>
+        <!-- <div class="filter">
+            <div class="filter-icon"><i class="fa-solid fa-person-swimming"></i></div>
+            <p class="filter-text">Amazing Pools</p>
+        </div> -->
+        <div class="tax-toggle">
+            <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse" role="switch" />
+                <label class="form-check-label" for="flexSwitchCheckReverse">Display Total after Taxes</label>
+            </div>
+        </div>
+    </div>
+    <!-- <hr /> -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        <% for(list of allListings) {%>
+            <a class="cards-links" href="/listings/<%= list._id %>">
+                <div class="card col listing-card index-card">
+                    <img src="<%= list.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>
+                                &nbsp; &nbsp; &nbsp; <%= list.title %>
+                            </b>
+                            <br />
+                            &nbsp; &nbsp; &nbsp; &#8377; <%= list.price.toLocaleString("en-IN") %> / night
+                            <i class="tax-info"> &nbsp; &nbsp; +18% GST </i>
+                        </p>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+
+    <script>
+        let taxSwitch = document.getElementById("flexSwitchCheckReverse");
+        taxSwitch.addEventListener("click", () => {
+            let taxInfos = document.getElementsByClassName("tax-info");
+            for(taxInfo of taxInfos){
+                if(taxInfo.style.display != "inline"){
+                    taxInfo.style.display = "inline";
+                }else{
+                    taxInfo.style.display = "none";
+                }
+            }
+        });
+    </script>
