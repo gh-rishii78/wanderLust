@@ -44,13 +44,31 @@ Explore the wonders of WanderLust by visiting our live website [here](https://wa
 
 ## Tech Stack
 
-- **MongoDB:** Cloud-based database management using MongoDB Atlas.
+- **MongoDB:** Cloud-based database management using [MongoDB Atlas](https://www.mongodb.com/docs/atlas/getting-started/).
   
-- **Express.js:** Backend framework for building a robust and scalable server.
+- **Express.js:** Backend framework for building a robust and scalable server. Documentation [Link1](https://devdocs.io/express/) [Link2](https://expressjs.com/).
 
-- **React.js:** Frontend library for creating a dynamic and responsive user interface.
+- **React.js:** Frontend library for creating a dynamic and responsive user interface. Documentation [here](https://reactjs.org/).
 
-- **Node.js:** JavaScript runtime for server-side development.
+- **Node.js:** JavaScript runtime for server-side development. Documentation [here]([https://nodejs.org/](https://www.npmjs.com/)).
+
+- **Passport:** Authentication middleware for Node.js. Documentation [here](https://www.passportjs.org/docs/).
+
+- **Mongoose:** MongoDB object modeling for Node.js. Documentation [here](https://mongoosejs.com/docs/index.html).
+
+- **Cloudinary:** Cloud-based image and video management. Documentation [here](https://cloudinary.com/documentation).
+
+- **Mapbox:** Location data platform for mobile and web applications. Documentation [here](https://docs.mapbox.com/mapbox-gl-js/).
+
+- **Rating Animations:** Utilized for interactive and engaging user experiences [here](https://github.com/LunarLogic/starability).
+
+- **Schema Design:** Implemented for structuring and organizing data [here](https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design).
+
+- **MDN Web Docs:** Reference for web development technologies. Documentation [here](https://developer.mozilla.org/).
+
+- **Render:** Presentation library for rendering components. Documentation [here](https://render.com/docs).
+
+- **Bootstrap:** Front-end framework for designing responsive and consistent web pages. Documentation [here](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 
 ## Deployment
 
