@@ -1,6 +1,6 @@
 # WanderLust - Your Ultimate Travel Accommodation Hub
 
-WanderLust is a dynamic and feature-rich travel accommodation website developed using the MERN stack. It offers a seamless experience for users seeking comfortable and unique places to stay during their travels. With powerful CRUD operations, robust authentication, cloud database integration, and various other features, WanderLust is your go-to platform for hassle-free travel planning.
+WanderLust is a cutting-edge travel accommodation website built with the MERN stack, offering a seamless user experience with powerful CRUD operations and robust Passport authentication. It integrates APIs for enhanced functionality, utilizes geolocation services and Google Maps for precise navigation, and leverages cloud services like Cloudinary for efficient media management. With its dynamic features and Render deployment, WanderLust is your ultimate solution for effortless travel planning and accommodation management.
 
 ## Live Demo
 
